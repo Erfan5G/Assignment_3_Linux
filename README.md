@@ -1,14 +1,16 @@
-# as3p2-starter-f23
+First, navigate to Digital Ocean and create two droplets. You can tag these droplets as you wish; in this assignment, I used the tag "web".
 
-You will have to edit some of these files to get your web servers working.
+Before finalizing the droplet creation, utilize the Add Initialization Scripts option for configuration purposes.
 
-The included backend server runs on port 8080, 127.0.0.1:8080
+Following the setup of the droplets, proceed to establish a load balancer. Once in place, verify the health of the connections between the load balancer and the servers.
 
-## Included material
+Next, begin modifying server files as detailed below:
 
-- backend binary, hello-server
-- frontend, index.html
-- nginx configuration file, hello.conf
-- service file for backend, hello-server.service
-- config for setting up servers, cloud-config.yml
-- example curl commands for testing your server, curl.md
+In the /var/www directory:
+
+Add hello.conf. Include the hello-server backend file and grant it execution permissions. Create a directory named my-site. Within the my-site directory, place the index.html file. This file will be served to users when they access the server. In the /etc/systemd/system directory:
+
+Place the hello-server.service file. This is a systemd service file for managing the server process. In the /etc/nginx/sites-available directory:
+
+Add the hello.conf file. Then, create a symbolic link to this file in the /etc/nginx/sites-enabled directory for Nginx to recognize and use it.
+
