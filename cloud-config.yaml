@@ -6,7 +6,7 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPaNlSYZabA1iV9X9/bc5bxfm/UIJ1w4K7UADmWXbRUn erfanngoudarzi@gmail.com 
+      - ssh-ed25519 --------------------------------| SSH PUBLIC KEY |----------------------
 
 packages:
   - ripgrep
